@@ -7,14 +7,7 @@ string(REPLACE "-" "_" current_dir "${current_dir}")
 #set(CMAKE_DEBUG_POSTFIX "d")
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
-set(Boost_DIR "C:/PCL 1.13.1/3rdParty/Boost")
-set(OpenCV_DIR "C:/PCL 1.13.1/3rdParty/opencv/build")
-set(Eigen_DIR "C:/PCL 1.13.1/3rdParty/Eigen/eigen3")
-set(fmt_DIR "C:/PCL 1.13.1/3rdParty/fmt-10.1.1-lib")
-list(APPEND CMAKE_PREFIX_PATH ${Boost_DIR})
-list(APPEND CMAKE_PREFIX_PATH ${OpenCV_DIR})
-list(APPEND CMAKE_PREFIX_PATH ${Eigen_DIR})
-list(APPEND CMAKE_PREFIX_PATH ${fmt_DIR})
+add_subdirectory("C:/PCL 1.13.1/3rdParty" 3rdParty.out)
 
 message("CMAKE_BUILD_TYPE \n\t : ${CMAKE_BUILD_TYPE}")
 
